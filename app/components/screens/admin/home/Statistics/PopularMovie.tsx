@@ -21,7 +21,7 @@ const PopularMovie: FC = () => {
 		'Most popular movie in admin',
 		() => MovieService.getMostPopularMovies(),
 		{
-			select: (data): IMovie => data[0],
+			select: (data): IMovie => data[0], // типа айдишник
 		}
 	)
 

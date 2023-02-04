@@ -1,10 +1,16 @@
-import { useState } from 'react'
-import { useMutation, useQuery } from 'react-query'
-import { toastr } from 'react-redux-toastr'
+import { useState } from 'react';
+import { useMutation, useQuery } from 'react-query';
+import { toastr } from 'react-redux-toastr';
 
-import { RatingService } from '@/services/rating/rating.service'
 
-import { toastError } from '@/utils/api/withToastrErrorRedux'
+
+import { RatingService } from '@/services/rating/rating.service';
+
+
+
+import { toastError } from '@/utils/api/withToastrErrorRedux';
+import { MovieService } from '@/services/movie/movie.service';
+
 
 export const useRateMovie = (movieId: string) => {
 	const [rating, setRating] = useState(0)
@@ -42,8 +48,9 @@ export const useRateMovie = (movieId: string) => {
 	)
 
 	const handleClick = async (nextValue: number) => {
-		setRating(nextValue)
-		await rateMovie({ value: nextValue })
+		setRating(nextValue) // т.е. тут сначала идет изменение на фронтенде
+		/* const CommonnValueFromBackend = */ await rateMovie({ value: nextValue }) // а тут уже далее идет изменение на бэкенде
+		// setValueInSidebars(CommonnValueFromBackend)
 	}
 
 	return {

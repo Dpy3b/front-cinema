@@ -18,7 +18,7 @@ const FavoriteButton: FC<{ movieId: string }> = ({ movieId }) => {
 
 	useEffect(() => {
 		if (favoritesMovies) {
-			const isHasMovie = favoritesMovies.some((f) => f._id === movieId)
+			const isHasMovie = favoritesMovies.some((f) => f._id === movieId) // типа мы проверяем фильм на существование или что...?
 			if (isSmashed !== isHasMovie) setIsSmashed(isHasMovie)
 		}
 	}, [favoritesMovies, isSmashed, movieId])

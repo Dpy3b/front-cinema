@@ -29,6 +29,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			link: getMovieUrl(m.slug),
 			subTitle: getGenresList(m.genres),
 			title: m.title,
+			posterPath: m.poster,
 			bigPoster: m.bigPoster,
 		}))
 
