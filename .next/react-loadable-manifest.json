@@ -1,0 +1,56 @@
+{
+  "..\\app\\components\\layout\\Navigation\\MenuContainer\\Menu.tsx -> ./auth/AuthItems": {
+    "id": 23587,
+    "files": [
+      "static/chunks/587.b41a0a8da77f2906.js"
+    ]
+  },
+  "..\\app\\components\\layout\\Navigation\\MenuContainer\\MenuContainer.tsx -> ./genres/GenreMenu": {
+    "id": 9507,
+    "files": [
+      "static/chunks/507.0af628c7b5464fed.js"
+    ]
+  },
+  "..\\app\\components\\layout\\Sidebar\\MoviesContainer\\MoviesContainer.tsx -> ./FavoriteMovieList/FavoriteMovieList": {
+    "id": 36136,
+    "files": [
+      "static/chunks/136.22e79ff928778cf1.js"
+    ]
+  },
+  "..\\app\\components\\screens\\admin\\genre\\GenreEdit.tsx -> @/ui/form-elements/TextEditor": {
+    "id": 40916,
+    "files": [
+      "static/chunks/2c386607.92306517d48330e4.js",
+      "static/css/c106f25de48bb24f.css",
+      "static/chunks/916.63edd5bd4f61b062.js"
+    ]
+  },
+  "..\\app\\components\\screens\\admin\\movie\\MovieEdit.tsx -> @/ui/select/Select": {
+    "id": 33336,
+    "files": [
+      "static/chunks/766.8eea7f0c84fb27c3.js",
+      "static/css/03e0d0277e1b3127.css",
+      "static/chunks/336.c126df47c214be9c.js"
+    ]
+  },
+  "..\\app\\components\\screens\\single-movie\\SingleMovie.tsx -> ./RateMovie/RateMovie": {
+    "id": 34643,
+    "files": [
+      "static/css/991d65bc05530abc.css",
+      "static/chunks/643.1b9ece385fbc8410.js"
+    ]
+  },
+  "..\\app\\components\\screens\\single-movie\\SingleMovie.tsx -> @/ui/video-player/VideoPlayer": {
+    "id": 32978,
+    "files": [
+      "static/css/c2985d20f3435f41.css",
+      "static/chunks/978.57d74d2f5d70be51.js"
+    ]
+  },
+  "..\\app\\providers\\AuthProvider\\AuthProvider.tsx -> ./CheckRole": {
+    "id": 90932,
+    "files": [
+      "static/chunks/932.dd9e8f6c46e01b5d.js"
+    ]
+  }
+}
