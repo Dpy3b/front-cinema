@@ -29,7 +29,6 @@ export const getStaticProps: GetStaticProps = async () => {
 			link: getMovieUrl(m.slug),
 			subTitle: getGenresList(m.genres),
 			title: m.title,
-			posterPath: m.poster,
 			bigPoster: m.bigPoster,
 		}))
 
@@ -57,6 +56,7 @@ export const getStaticProps: GetStaticProps = async () => {
 				slides,
 				trendingMovies,
 			} as IHome,
+			revalidate: 60,
 		}
 	} catch (error) {
 		console.log(errorCatch(error))

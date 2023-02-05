@@ -1,20 +1,13 @@
 import { FC } from 'react'
-import { useQuery } from 'react-query'
 
 import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
 
-import { MovieService } from '@/services/movie/movie.service'
-
 import MovieList from '../MovieList'
 
+import { usePopular } from './usePopular'
+
 const PopularMovieList: FC = () => {
-	const { isLoading, data: popularMovies } = useQuery(
-		'Most popular movie in sidebar',
-		() => MovieService.getMostPopularMovies(),
-		{
-			select: (data) => data.slice(0, 3),
-		}
-	)
+	const { isLoading, popularMovies } = usePopular()
 
 	return isLoading ? (
 		<div className="mt-11">

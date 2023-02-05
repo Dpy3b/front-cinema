@@ -6,10 +6,10 @@ import { UserService } from '@/services/user/user.service'
 
 import { toastError } from '@/utils/api/withToastrErrorRedux'
 
+import HeartImage from '../../../../../public/heart-animation.png'
 import { useFavorites } from '../../favorites/useFavorites'
 
 import styles from './FavoriteButton.module.scss'
-import HeartImage from './heart-animation.png'
 
 const FavoriteButton: FC<{ movieId: string }> = ({ movieId }) => {
 	const [isSmashed, setIsSmashed] = useState(false)

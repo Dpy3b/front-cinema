@@ -1,3 +1,4 @@
+import { usePopular } from './../../../layout/Sidebar/MoviesContainer/PopularMovieList/usePopular';
 import { useState } from 'react';
 import { useMutation, useQuery } from 'react-query';
 import { toastr } from 'react-redux-toastr';
@@ -10,11 +11,14 @@ import { RatingService } from '@/services/rating/rating.service';
 
 import { toastError } from '@/utils/api/withToastrErrorRedux';
 import { MovieService } from '@/services/movie/movie.service';
+import { useFavorites } from '../../favorites/useFavorites';
+import { useAuth } from '@/hooks/useAuth';
 
 
 export const useRateMovie = (movieId: string) => {
 	const [rating, setRating] = useState(0)
 	const [isSended, setIsSended] = useState(false)
+	const { user } = useAuth()
 
 	const { refetch } = useQuery(
 		['your movie rating', movieId],
@@ -23,7 +27,7 @@ export const useRateMovie = (movieId: string) => {
 			onSuccess({ data }) {
 				setRating(data)
 			},
-			enabled: !!movieId,
+			enabled: !!movieId && !!user,
 		}
 	)
 
@@ -47,12 +51,23 @@ export const useRateMovie = (movieId: string) => {
 		}
 	)
 
+	const { refetch: refetchFavoritesInSideber} = useFavorites()
+	const {refetch: refetchPopularInSideber} = usePopular()
+
+
+	const handleClick = async (nextValue: number) => {
+		setRating(nextValue)
+		await rateMovie({ value: nextValue })
+		refetchFavoritesInSideber()
+		refetchPopularInSideber()
+	}
+/*
 	const handleClick = async (nextValue: number) => {
 		setRating(nextValue) // т.е. тут сначала идет изменение на фронтенде
-		/* const CommonnValueFromBackend = */ await rateMovie({ value: nextValue }) // а тут уже далее идет изменение на бэкенде
+		const CommonnValueFromBackend =  await rateMovie({ value: nextValue }) // а тут уже далее идет изменение на бэкенде
 		// setValueInSidebars(CommonnValueFromBackend)
 	}
-
+ */
 	return {
 		isSended,
 		rating,
