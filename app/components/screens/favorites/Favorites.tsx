@@ -10,11 +10,15 @@ import { getMovieUrl } from '@/configs/url.config'
 import FavoriteItem from './FavoriteItem'
 import styles from './Favorites.module.scss'
 import { useFavorites } from './useFavorites'
+import { useAuth } from '@/hooks/useAuth'
+import NotAuthFavorites from '@/components/layout/Sidebar/MoviesContainer/FavoriteMovieList/NotAuthFavorites'
 
 const Favorites: FC = () => {
+	const {user} = useAuth()
+
+	if (!user) return <NotAuthFavorites/>
 
 	const { favoritesMovies, isLoading } = useFavorites()
-
 	return (
 		<Meta title="Favorites">
 			<Heading title={'Favorites'} />

@@ -1,4 +1,7 @@
-import axios from './interceptors'
+
+export const lala = ''
+
+/* import axios from './interceptors'
 
 type TypeInput = {
 	url: string
@@ -13,3 +16,4 @@ export const api = async ({ url, method, body }: TypeInput) => {
 		data: body,
 	})
 }
+ */

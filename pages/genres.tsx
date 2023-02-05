@@ -23,8 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		// console.log(errorCatch(e))
 
 		return {
-			props: {},
-			// notFound: true,
+			notFound: true,
 		}
 	}
 }

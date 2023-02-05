@@ -1,4 +1,3 @@
-import { IMovie } from './../../shared/types/movie.types';
 import axios, { axiosClassic } from 'api/interceptors'
 
 import { IGenreEditInput } from '@/screens/admin/genre/genre-edit.interface'
