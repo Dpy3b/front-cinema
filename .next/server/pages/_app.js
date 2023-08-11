@@ -95,7 +95,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9247:
+/***/ 6983:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -110,7 +110,7 @@ module.exports = {
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -121,13 +121,13 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var _Layout_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5241);
 /* harmony import */ var _Layout_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Layout_module_scss__WEBPACK_IMPORTED_MODULE_3__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_1__]);
-_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
 
 const Layout = ({ children  })=>{
-    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         className: (_Layout_module_scss__WEBPACK_IMPORTED_MODULE_3___default().layout),
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Navigation_Navigation__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {}),
@@ -137,11 +137,12 @@ const Layout = ({ children  })=>{
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {})
         ]
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -159,21 +160,23 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(5675);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./node_modules/next/link.js
 var next_link = __webpack_require__(1664);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 // EXTERNAL MODULE: ./app/assets/images/logo.svg
-var logo = __webpack_require__(9247);
+var logo = __webpack_require__(6983);
 ;// CONCATENATED MODULE: ./app/components/layout/Navigation/Logo.tsx
 
 
 
 
 const Logo = ()=>{
-    return(/*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+    return /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
         href: "/",
         children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
             className: "px-layout mb-10 block",
-            children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
+            children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                 src: logo/* default */.Z,
                 width: 247,
                 height: 34,
@@ -181,12 +184,13 @@ const Logo = ()=>{
                 draggable: false
             })
         })
-    }));
+    });
 };
 /* harmony default export */ const Navigation_Logo = (Logo);
 
 // EXTERNAL MODULE: ./node_modules/next/dynamic.js
 var dynamic = __webpack_require__(5152);
+var dynamic_default = /*#__PURE__*/__webpack_require__.n(dynamic);
 // EXTERNAL MODULE: ./app/components/layout/Navigation/MenuContainer/Menu.module.scss
 var Menu_module = __webpack_require__(7420);
 var Menu_module_default = /*#__PURE__*/__webpack_require__.n(Menu_module);
@@ -206,11 +210,11 @@ var MaterialIcon = __webpack_require__(6980);
 
 const MenuItem = ({ item  })=>{
     const { asPath  } = (0,router_.useRouter)();
-    return(/*#__PURE__*/ jsx_runtime_.jsx("li", {
+    return /*#__PURE__*/ jsx_runtime_.jsx("li", {
         className: external_classnames_default()({
             [(Menu_module_default()).active]: asPath === item.link
         }),
-        children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+        children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
             href: item.link,
             children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("a", {
                 children: [
@@ -223,7 +227,7 @@ const MenuItem = ({ item  })=>{
                 ]
             })
         })
-    }));
+    });
 };
 /* harmony default export */ const MenuContainer_MenuItem = (MenuItem);
 
@@ -232,7 +236,7 @@ const MenuItem = ({ item  })=>{
 
 
 
-const DynamicAuthItems = (0,dynamic["default"])(null, {
+const DynamicAuthItems = dynamic_default()(null, {
     loadableGenerated: {
         modules: [
             "..\\app\\components\\layout\\Navigation\\MenuContainer\\Menu.tsx -> " + "./auth/AuthItems"
@@ -241,7 +245,7 @@ const DynamicAuthItems = (0,dynamic["default"])(null, {
     ssr: false
 });
 const Menu = ({ menu: { items , title  }  })=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (Menu_module_default()).menu,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -253,44 +257,43 @@ const Menu = ({ menu: { items , title  }  })=>{
                 children: [
                     items.map((item)=>/*#__PURE__*/ jsx_runtime_.jsx(MenuContainer_MenuItem, {
                             item: item
-                        }, item.link)
-                    ),
-                    title === 'General' ? /*#__PURE__*/ jsx_runtime_.jsx(DynamicAuthItems, {}) : null
+                        }, item.link)),
+                    title === "General" ? /*#__PURE__*/ jsx_runtime_.jsx(DynamicAuthItems, {}) : null
                 ]
             })
         ]
-    }));
+    });
 };
 /* harmony default export */ const MenuContainer_Menu = (Menu);
 
 ;// CONCATENATED MODULE: ./app/components/layout/Navigation/MenuContainer/menu.data.ts
 const firstMenu = {
-    title: 'Menu',
+    title: "Menu",
     items: [
         {
-            icon: 'MdHome',
-            link: '/',
-            title: 'Home'
+            icon: "MdHome",
+            link: "/",
+            title: "Home"
         },
         {
-            icon: 'MdExplore',
-            link: '/genres',
-            title: 'Discovery'
+            icon: "MdExplore",
+            link: "/genres",
+            title: "Discovery"
         },
         {
-            icon: 'MdRefresh',
-            link: '/fresh',
-            title: 'Fresh movies'
+            icon: "MdRefresh",
+            link: "/fresh",
+            title: "Fresh movies"
         },
         {
-            icon: 'MdLocalFireDepartment',
-            link: '/trending',
-            title: 'Trending now'
+            icon: "MdLocalFireDepartment",
+            link: "/trending",
+            title: "Trending now"
         }, 
     ]
 };
 const userMenu = {
-    title: 'General',
+    title: "General",
     items: []
 };
 const menus = [
@@ -303,7 +306,7 @@ const menus = [
 
 
 
-const DynamicGenreMenu = (0,dynamic["default"])(null, {
+const DynamicGenreMenu = dynamic_default()(null, {
     loadableGenerated: {
         modules: [
             "..\\app\\components\\layout\\Navigation\\MenuContainer\\MenuContainer.tsx -> " + "./genres/GenreMenu"
@@ -312,7 +315,7 @@ const DynamicGenreMenu = (0,dynamic["default"])(null, {
     ssr: false
 });
 const MenuContainer = ()=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(MenuContainer_Menu, {
                 menu: menus[0]
@@ -320,12 +323,12 @@ const MenuContainer = ()=>{
             /*#__PURE__*/ jsx_runtime_.jsx(DynamicGenreMenu, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(MenuContainer_Menu, {
                 menu: {
-                    title: 'General',
+                    title: "General",
                     items: []
                 }
             })
         ]
-    }));
+    });
 };
 /* harmony default export */ const MenuContainer_MenuContainer = (MenuContainer);
 
@@ -338,13 +341,13 @@ var Navigation_module_default = /*#__PURE__*/__webpack_require__.n(Navigation_mo
 
 
 const Navigation = ()=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (Navigation_module_default()).navigation,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(Navigation_Logo, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(MenuContainer_MenuContainer, {})
         ]
-    }));
+    });
 };
 /* harmony default export */ const Navigation_Navigation = (Navigation);
 
@@ -365,8 +368,10 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: ./node_modules/next/link.js
 var next_link = __webpack_require__(1664);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(5675);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./app/components/ui/icons/MaterialIcon.tsx + 1 modules
 var MaterialIcon = __webpack_require__(6980);
 // EXTERNAL MODULE: ./app/utils/movie/getGenresList.ts
@@ -385,13 +390,13 @@ var MovieList_module_default = /*#__PURE__*/__webpack_require__.n(MovieList_modu
 
 
 const MovieItem = ({ movie  })=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (MovieList_module_default()).item,
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
                 href: (0,url_config/* getMovieUrl */.Xl)(movie.slug),
                 children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
+                    children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                         alt: movie.title,
                         width: 65,
                         height: 97,
@@ -412,13 +417,12 @@ const MovieItem = ({ movie  })=>{
                             }),
                             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                                 className: (MovieList_module_default()).genres,
-                                children: movie.genres.map(({ slug , name , _id  }, idx)=>/*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                                children: movie.genres.map(({ slug , name , _id  }, idx)=>/*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
                                         href: (0,url_config/* getGenreUrl */.i8)(slug),
                                         children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
                                             children: (0,getGenresList/* getGenresListEach */.R)(idx, movie.genres.length, name)
                                         })
-                                    }, _id)
-                                )
+                                    }, _id))
                             })
                         ]
                     }),
@@ -436,7 +440,7 @@ const MovieItem = ({ movie  })=>{
                 ]
             })
         ]
-    }));
+    });
 };
 /* harmony default export */ const MoviesContainer_MovieItem = (MovieItem);
 
@@ -446,7 +450,7 @@ const MovieItem = ({ movie  })=>{
 
 
 const MovieList = ({ list: { link , movies , title  } ,  })=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (MovieList_module_default()).list,
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -455,9 +459,8 @@ const MovieList = ({ list: { link , movies , title  } ,  })=>{
             }),
             movies.map((movie)=>/*#__PURE__*/ jsx_runtime_.jsx(MoviesContainer_MovieItem, {
                     movie: movie
-                }, movie._id)
-            ),
-            /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                }, movie._id)),
+            /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
                 href: link,
                 children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
                     className: (MovieList_module_default()).button,
@@ -465,7 +468,7 @@ const MovieList = ({ list: { link , movies , title  } ,  })=>{
                 })
             })
         ]
-    }));
+    });
 };
 /* harmony default export */ const MoviesContainer_MovieList = (MovieList);
 
@@ -476,20 +479,21 @@ const MovieList = ({ list: { link , movies , title  } ,  })=>{
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5152);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _PopularMovieList_PopularMovieList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5618);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_PopularMovieList_PopularMovieList__WEBPACK_IMPORTED_MODULE_2__]);
-_PopularMovieList_PopularMovieList__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_PopularMovieList_PopularMovieList__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
-const DynamicFavoritesMovies = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_1__["default"])(null, {
+const DynamicFavoritesMovies = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(null, {
     loadableGenerated: {
         modules: [
             "..\\app\\components\\layout\\Sidebar\\MoviesContainer\\MoviesContainer.tsx -> " + "./FavoriteMovieList/FavoriteMovieList"
@@ -498,17 +502,18 @@ const DynamicFavoritesMovies = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_1__["def
     ssr: false
 });
 const MoviesContainer = ()=>{
-    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_PopularMovieList_PopularMovieList__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {}),
             " ",
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(DynamicFavoritesMovies, {})
         ]
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MoviesContainer);
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -516,7 +521,7 @@ const MoviesContainer = ()=>{
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -526,7 +531,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var _MovieList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1711);
 /* harmony import */ var _usePopular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4450);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_usePopular__WEBPACK_IMPORTED_MODULE_3__]);
-_usePopular__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_usePopular__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
@@ -541,15 +546,16 @@ const PopularMovieList = ()=>{
         })
     }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_MovieList__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
         list: {
-            link: '/trending',
+            link: "/trending",
             movies: popularMovies || [],
-            title: 'Popular movies'
+            title: "Popular movies"
         }
     });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PopularMovieList);
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -557,7 +563,7 @@ const PopularMovieList = ()=>{
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "U": () => (/* binding */ usePopular)
 /* harmony export */ });
@@ -565,12 +571,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var react_query__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_query__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _services_movie_movie_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3618);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_1__]);
-_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 const usePopular = ()=>{
-    const { isLoading , data: popularMovies , refetch ,  } = (0,react_query__WEBPACK_IMPORTED_MODULE_0__.useQuery)('Most popular movie in sidebar', ()=>_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_1__/* .MovieService.getMostPopularMovies */ .u.getMostPopularMovies()
-    , {
+    const { isLoading , data: popularMovies , refetch ,  } = (0,react_query__WEBPACK_IMPORTED_MODULE_0__.useQuery)("Most popular movie in sidebar", ()=>_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_1__/* .MovieService.getMostPopularMovies */ .u.getMostPopularMovies(), {
         select: (data)=>data.slice(0, 3)
     });
     return {
@@ -580,7 +585,8 @@ const usePopular = ()=>{
     };
 };
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -588,7 +594,7 @@ const usePopular = ()=>{
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -605,7 +611,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var _Search_module_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Search_module_scss__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _SearchList_SearchList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7337);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_5__]);
-_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_5__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_5__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
@@ -615,21 +621,19 @@ _services_movie_movie_service__WEBPACK_IMPORTED_MODULE_5__ = (__webpack_async_de
 
 
 const Search = ()=>{
-    const { 0: searchTerm , 1: setSearchTerm  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
+    const { 0: searchTerm , 1: setSearchTerm  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");
     const debouncedSearch = (0,_hooks_useDebounce__WEBPACK_IMPORTED_MODULE_4__/* .useDebounce */ .N)(searchTerm, 500);
     const { isSuccess , data: popularMovies  } = (0,react_query__WEBPACK_IMPORTED_MODULE_2__.useQuery)([
-        'search movie list',
+        "search movie list",
         debouncedSearch
-    ], ()=>_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_5__/* .MovieService.getMovies */ .u.getMovies(debouncedSearch)
-    , {
-        select: ({ data  })=>data
-        ,
+    ], ()=>_services_movie_movie_service__WEBPACK_IMPORTED_MODULE_5__/* .MovieService.getMovies */ .u.getMovies(debouncedSearch), {
+        select: ({ data  })=>data,
         enabled: !!debouncedSearch
     });
     const handleSearch = (e)=>{
         setSearchTerm(e.target.value);
     };
-    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         className: (_Search_module_scss__WEBPACK_IMPORTED_MODULE_7___default().wrapper),
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_ui_search_field_SearchField__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
@@ -640,11 +644,12 @@ const Search = ()=>{
                 movies: popularMovies || []
             })
         ]
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Search);
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -658,7 +663,9 @@ const Search = ()=>{
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5675);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _SearchList_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(518);
 /* harmony import */ var _SearchList_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_SearchList_module_scss__WEBPACK_IMPORTED_MODULE_3__);
 
@@ -666,14 +673,14 @@ const Search = ()=>{
 
 
 const SearchList = ({ movies  })=>{
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
         className: (_SearchList_module_scss__WEBPACK_IMPORTED_MODULE_3___default().list),
-        children: movies.length ? movies.map((movie)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_link__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        children: movies.length ? movies.map((movie)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                 href: `/movie/${movie.slug}`,
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
                     children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_image__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                            src: movie.poster || '',
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
+                            src: movie.poster || "",
                             width: 50,
                             height: 50,
                             objectFit: "cover",
@@ -686,12 +693,11 @@ const SearchList = ({ movies  })=>{
                         })
                     ]
                 })
-            }, movie._id)
-        ) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+            }, movie._id)) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
             className: "text-white text-center my-4",
             children: "Movies not found!"
         })
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchList);
 
@@ -702,7 +708,7 @@ const SearchList = ({ movies  })=>{
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -713,23 +719,24 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var _Sidebar_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5325);
 /* harmony import */ var _Sidebar_module_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Sidebar_module_scss__WEBPACK_IMPORTED_MODULE_3__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_MoviesContainer_MoviesContainer__WEBPACK_IMPORTED_MODULE_1__, _Search_Search__WEBPACK_IMPORTED_MODULE_2__]);
-([_MoviesContainer_MoviesContainer__WEBPACK_IMPORTED_MODULE_1__, _Search_Search__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__);
+([_MoviesContainer_MoviesContainer__WEBPACK_IMPORTED_MODULE_1__, _Search_Search__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
 
 const Sidebar = ()=>{
-    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         className: (_Sidebar_module_scss__WEBPACK_IMPORTED_MODULE_3___default().sidebar),
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Search_Search__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_MoviesContainer_MoviesContainer__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {})
         ]
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Sidebar);
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -747,7 +754,7 @@ const Sidebar = ()=>{
 
 
 const ReduxToastr = ()=>{
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_redux_toastr__WEBPACK_IMPORTED_MODULE_1___default()), {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_redux_toastr__WEBPACK_IMPORTED_MODULE_1___default()), {
         newestOnTop: false,
         preventDuplicates: true,
         progressBar: true,
@@ -755,7 +762,7 @@ const ReduxToastr = ()=>{
         timeOut: 4000,
         transitionIn: "fadeIn",
         transitionOut: "fadeOut"
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReduxToastr);
 
@@ -782,12 +789,12 @@ const ReduxToastr = ()=>{
 
 
 const SkeletonLoader = ({ className , ...rest })=>{
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_loading_skeleton__WEBPACK_IMPORTED_MODULE_2___default()), {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_loading_skeleton__WEBPACK_IMPORTED_MODULE_2___default()), {
         ...rest,
         baseColor: "#1F2125",
         highlightColor: "#292A2E",
-        className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('rounded-lg', className)
-    }));
+        className: classnames__WEBPACK_IMPORTED_MODULE_1___default()("rounded-lg", className)
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SkeletonLoader);
 
@@ -798,7 +805,7 @@ const SkeletonLoader = ({ className , ...rest })=>{
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -806,6 +813,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9915);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5152);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1853);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6689);
@@ -813,7 +821,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var _hooks_useActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3710);
 /* harmony import */ var _hooks_useAuth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1163);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([js_cookie__WEBPACK_IMPORTED_MODULE_1__, _hooks_useActions__WEBPACK_IMPORTED_MODULE_5__]);
-([js_cookie__WEBPACK_IMPORTED_MODULE_1__, _hooks_useActions__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__);
+([js_cookie__WEBPACK_IMPORTED_MODULE_1__, _hooks_useActions__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -821,7 +829,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([js_c
 
 
 
-const DynamicCheckRole = (0,next_dynamic__WEBPACK_IMPORTED_MODULE_2__["default"])(null, {
+const DynamicCheckRole = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(null, {
     loadableGenerated: {
         modules: [
             "..\\app\\providers\\AuthProvider\\AuthProvider.tsx -> " + "./CheckRole"
@@ -834,12 +842,12 @@ const AuthProvider = ({ children , Component: { isOnlyAdmin , isOnlyUser  } ,  }
     const { checkAuth , logout  } = (0,_hooks_useActions__WEBPACK_IMPORTED_MODULE_5__/* .useActions */ .o)();
     const { pathname  } = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     (0,react__WEBPACK_IMPORTED_MODULE_4__.useEffect)(()=>{
-        const accessToken = js_cookie__WEBPACK_IMPORTED_MODULE_1__["default"].get('accessToken');
+        const accessToken = js_cookie__WEBPACK_IMPORTED_MODULE_1__["default"].get("accessToken");
         if (accessToken) checkAuth();
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
     ;
     (0,react__WEBPACK_IMPORTED_MODULE_4__.useEffect)(()=>{
-        const refreshToken = js_cookie__WEBPACK_IMPORTED_MODULE_1__["default"].get('refreshToken');
+        const refreshToken = js_cookie__WEBPACK_IMPORTED_MODULE_1__["default"].get("refreshToken");
         if (!refreshToken && user) logout();
     }, [
         pathname
@@ -857,7 +865,8 @@ const AuthProvider = ({ children , Component: { isOnlyAdmin , isOnlyUser  } ,  }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AuthProvider);
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -884,7 +893,7 @@ var constants = __webpack_require__(4507);
 ;// CONCATENATED MODULE: ./app/providers/HeadProvider/Favicons.tsx
 
 const Favicons = ()=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("link", {
                 rel: "shortcut icon",
@@ -936,7 +945,7 @@ const Favicons = ()=>{
                 href: "/favicons/apple-touch-icon-180x180.png"
             })
         ]
-    }));
+    });
 };
 /* harmony default export */ const HeadProvider_Favicons = (Favicons);
 
@@ -947,7 +956,7 @@ const Favicons = ()=>{
 
 
 const HeadProvider = ({ children  })=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx((external_nextjs_progressbar_default()), {
                 color: constants/* accentColor */.z,
@@ -967,21 +976,21 @@ const HeadProvider = ({ children  })=>{
                     /*#__PURE__*/ jsx_runtime_.jsx(HeadProvider_Favicons, {}),
                     /*#__PURE__*/ jsx_runtime_.jsx("meta", {
                         name: "theme-color",
-                        content: '#181B1E'
+                        content: "#181B1E"
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("meta", {
                         name: "msapplication-navbutton-color",
-                        content: '#181B1E'
+                        content: "#181B1E"
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("meta", {
                         name: "apple-mobile-web-app-status-bar-style",
-                        content: '#181B1E'
+                        content: "#181B1E"
                     })
                 ]
             }),
             children
         ]
-    }));
+    });
 };
 /* harmony default export */ const HeadProvider_HeadProvider = (HeadProvider);
 
@@ -992,7 +1001,7 @@ const HeadProvider = ({ children  })=>{
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -1007,8 +1016,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var store_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1079);
 /* harmony import */ var _components_layout_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6845);
 /* harmony import */ var _ui_redux_toastr_ReduxToastr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(1981);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_layout_Layout__WEBPACK_IMPORTED_MODULE_6__, _AuthProvider_AuthProvider__WEBPACK_IMPORTED_MODULE_1__, store_store__WEBPACK_IMPORTED_MODULE_5__]);
-([_components_layout_Layout__WEBPACK_IMPORTED_MODULE_6__, _AuthProvider_AuthProvider__WEBPACK_IMPORTED_MODULE_1__, store_store__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_AuthProvider_AuthProvider__WEBPACK_IMPORTED_MODULE_1__, store_store__WEBPACK_IMPORTED_MODULE_5__, _components_layout_Layout__WEBPACK_IMPORTED_MODULE_6__]);
+([_AuthProvider_AuthProvider__WEBPACK_IMPORTED_MODULE_1__, store_store__WEBPACK_IMPORTED_MODULE_5__, _components_layout_Layout__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -1025,7 +1034,7 @@ const queryClient = new react_query__WEBPACK_IMPORTED_MODULE_3__.QueryClient({
     }
 });
 const MainProvider = ({ children , Component  })=>{
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_HeadProvider_HeadProvider__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_HeadProvider_HeadProvider__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, {
             store: store_store__WEBPACK_IMPORTED_MODULE_5__/* .store */ .h,
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_query__WEBPACK_IMPORTED_MODULE_3__.QueryClientProvider, {
@@ -1041,11 +1050,12 @@ const MainProvider = ({ children , Component  })=>{
                 ]
             })
         })
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MainProvider);
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -1053,7 +1063,7 @@ const MainProvider = ({ children , Component  })=>{
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "l": () => (/* binding */ reducers)
 /* harmony export */ });
@@ -1061,7 +1071,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var react_redux_toastr__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_redux_toastr__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _user_user_slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8726);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_user_user_slice__WEBPACK_IMPORTED_MODULE_1__]);
-_user_user_slice__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_user_user_slice__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 const reducers = {
@@ -1069,7 +1079,8 @@ const reducers = {
     toastr: react_redux_toastr__WEBPACK_IMPORTED_MODULE_0__.reducer
 };
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -1077,7 +1088,7 @@ const reducers = {
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "h": () => (/* binding */ store)
 /* harmony export */ });
@@ -1085,7 +1096,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _rootReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4070);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_rootReducer__WEBPACK_IMPORTED_MODULE_1__]);
-_rootReducer__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_rootReducer__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.configureStore)({
@@ -1093,7 +1104,8 @@ const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.configureStore)({
     devTools: true
 });
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -1101,7 +1113,7 @@ const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.configureStore)({
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "I": () => (/* binding */ reducer)
 /* harmony export */ });
@@ -1111,16 +1123,16 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
 /* harmony import */ var _utils_local_storage_localStorage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6711);
 /* harmony import */ var _user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6444);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_user_actions__WEBPACK_IMPORTED_MODULE_1__]);
-_user_actions__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_user_actions__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
 const initialState = {
-    user: (0,_utils_local_storage_localStorage__WEBPACK_IMPORTED_MODULE_2__/* .getStoreLocal */ .m)('user'),
+    user: (0,_utils_local_storage_localStorage__WEBPACK_IMPORTED_MODULE_2__/* .getStoreLocal */ .m)("user"),
     isLoading: false
 };
 const userSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
-    name: 'user',
+    name: "user",
     initialState,
     reducers: {},
     extraReducers: (builder)=>{
@@ -1150,7 +1162,8 @@ const userSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)(
 });
 const { reducer  } = userSlice;
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -1168,7 +1181,7 @@ const { reducer  } = userSlice;
 
 const toastError = (error, title)=>{
     const message = (0,api_api_helpers__WEBPACK_IMPORTED_MODULE_1__/* .errorCatch */ .l)(error);
-    react_redux_toastr__WEBPACK_IMPORTED_MODULE_0__.toastr.error(title || 'Error request', message);
+    react_redux_toastr__WEBPACK_IMPORTED_MODULE_0__.toastr.error(title || "Error request", message);
     throw message;
 };
 
@@ -1183,7 +1196,7 @@ const toastError = (error, title)=>{
 /* harmony export */   "m": () => (/* binding */ getStoreLocal)
 /* harmony export */ });
 const getStoreLocal = (name)=>{
-    if (typeof localStorage !== 'undefined') {
+    if (typeof localStorage !== "undefined") {
         const ls = localStorage.getItem(name);
         return ls ? JSON.parse(ls) : null;
     }
@@ -1198,14 +1211,11 @@ const getStoreLocal = (name)=>{
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "R": () => (/* binding */ getGenresListEach),
-/* harmony export */   "Q": () => (/* binding */ getGenresList)
+/* harmony export */   "Q": () => (/* binding */ getGenresList),
+/* harmony export */   "R": () => (/* binding */ getGenresListEach)
 /* harmony export */ });
-const getGenresListEach = (index, length, name)=>index + 1 === length ? name : name + ', '
-;
-const getGenresList = (array)=>array.map((i)=>i.name
-    ).join(', ')
-;
+const getGenresListEach = (index, length, name)=>index + 1 === length ? name : name + ", ";
+const getGenresList = (array)=>array.map((i)=>i.name).join(", ");
 
 
 /***/ }),
@@ -1214,7 +1224,7 @@ const getGenresList = (array)=>array.map((i)=>i.name
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__) => {
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -1223,21 +1233,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _app_providers_MainProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9583);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_app_providers_MainProvider__WEBPACK_IMPORTED_MODULE_1__]);
-_app_providers_MainProvider__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? await __webpack_async_dependencies__ : __webpack_async_dependencies__)[0];
+_app_providers_MainProvider__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
 const MyApp = ({ Component , pageProps  })=>{
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_app_providers_MainProvider__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_app_providers_MainProvider__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
         Component: Component,
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
             ...pageProps
         })
-    }));
+    });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);
 
-});
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -1272,19 +1283,19 @@ module.exports = require("classnames");
 
 /***/ }),
 
-/***/ 562:
+/***/ 3280:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/server/denormalize-page-path.js");
+module.exports = require("next/dist/shared/lib/app-router-context.js");
 
 /***/ }),
 
-/***/ 8028:
+/***/ 2796:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/server/image-config.js");
+module.exports = require("next/dist/shared/lib/head-manager-context.js");
 
 /***/ }),
 
@@ -1304,6 +1315,30 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
+/***/ 744:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config-context.js");
+
+/***/ }),
+
+/***/ 5843:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/image-config.js");
+
+/***/ }),
+
+/***/ 8524:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/is-plain-object.js");
+
+/***/ }),
+
 /***/ 5832:
 /***/ ((module) => {
 
@@ -1320,11 +1355,51 @@ module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
+/***/ 4406:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/page-path/denormalize-page-path.js");
+
+/***/ }),
+
 /***/ 4964:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 1751:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js");
+
+/***/ }),
+
+/***/ 6220:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/compare-states.js");
+
+/***/ }),
+
+/***/ 299:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/format-next-pathname-info.js");
+
+/***/ }),
+
+/***/ 3938:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
 
 /***/ }),
 
@@ -1336,11 +1411,11 @@ module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-
 
 /***/ }),
 
-/***/ 4365:
+/***/ 5789:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/shared/lib/router/utils/get-middleware-regex.js");
+module.exports = require("next/dist/shared/lib/router/utils/get-next-pathname-info.js");
 
 /***/ }),
 
@@ -1352,6 +1427,14 @@ module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
 
 /***/ }),
 
+/***/ 8854:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
+
+/***/ }),
+
 /***/ 1292:
 /***/ ((module) => {
 
@@ -1360,11 +1443,27 @@ module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.j
 
 /***/ }),
 
+/***/ 4567:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/path-has-prefix.js");
+
+/***/ }),
+
 /***/ 979:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 3297:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash.js");
 
 /***/ }),
 
@@ -1389,14 +1488,6 @@ module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
 
 "use strict";
 module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
-
-/***/ }),
-
-/***/ 3018:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/to-base-64.js");
 
 /***/ }),
 
@@ -1495,7 +1586,7 @@ module.exports = import("js-cookie");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [730,664,675,152,771,714,125,354,59], () => (__webpack_exec__(5656)));
+var __webpack_exports__ = __webpack_require__.X(0, [952,664,675,152,771,714,590,618,354,59], () => (__webpack_exec__(5656)));
 module.exports = __webpack_exports__;
 
 })();
